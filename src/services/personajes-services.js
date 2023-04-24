@@ -1,5 +1,6 @@
-import config from '../../dbconfig-env.js';
-//import config from '../../dbconfig.js';
+// import { config } from "dotenv"
+// import config from "dbconfig-env.js"
+
 import sql from 'mssql';
 
 class PersonajesService {
