@@ -1,12 +1,12 @@
 import PersonajesService from "./src/services/personajes-services.js"
-
+import PeliculasService from "./src/services/peliculas-services.js";
 
 // import Personaje from "./src/models/Personaje"
 
 getAll()
 
 async function getAll(){
-    let svc = new PersonajesService();
+    let svc = new PeliculasService();
     let data;
 
     data = await svc.getAll()
