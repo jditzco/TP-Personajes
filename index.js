@@ -2,7 +2,8 @@ import express from "express";
 import PersonajesService from "./src/services/personajes-services.js"
 import PeliculasService from "./src/services/peliculas-services.js";
 
-import indexhtml from "./indexhtml.js";
+import index from "./src/pages/index.js";
+import login from "./src/pages/login.js";
 // import Personaje from "./src/models/Personaje"
 console.clear()
 
@@ -15,9 +16,13 @@ async function getPeliculas(){
 
 const app = express()
 const port = 3000
+app.listen(port, () => console.log(`Example app listening on port ${port}`))
 
 app.get('/', (req, res) => {
-    res.send(indexhtml)
+    res.send(index)
+
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`))
+app.get('/auth/login', (req, res) => {
+    res.send(login)
+})
