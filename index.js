@@ -18,11 +18,12 @@ const app = express()
 const port = 3000
 app.listen(port, () => console.log(`Example app listening on port ${port}`))
 
-app.get('/', (req, res) => {
-    res.send(index)
+app.get('/', (req, res) => res.send(index))
 
-})
+app.get('/auth/login', (req, res) => res.send(login + "<br><br>NO HAY QUE HACERLO TODAVIA"))
 
-app.get('/auth/login', (req, res) => {
-    res.send(login)
+app.get('/characters', async (req, res) => {
+    let svc = new PersonajesService()
+    let data = await svc.getAll()
+    res.send(JSON.stringify(data))
 })
