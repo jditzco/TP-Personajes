@@ -1,6 +1,5 @@
 import sql from 'mssql';
 import config from '../../dbconfig-env.js';
-import Personaje from "../models/Personaje.js"
 
 class PersonajesService {
     getAll = async () => {

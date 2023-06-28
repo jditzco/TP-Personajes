@@ -1,6 +1,5 @@
 import sql from 'mssql';
 import config from '../../dbconfig-env.js';
-import Pelicula from "../models/Pelicula.js"
 
 class PeliculasService {
     getAll = async () => {
